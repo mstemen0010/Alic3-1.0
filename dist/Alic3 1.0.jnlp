@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Alic3 1.0.jnlp">
+  <information>
+    <title>Alic3 1.0</title>
+    <vendor>Mathias</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <jfx:javafx-runtime version="2.2+" href="http://javadl.sun.com/webapps/download/GetFile/javafx-latest/windows-i586/javafx2.jnlp"/>
+  </resources>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="lib/commons-codec-1.6.jar" size="253492" download="eager" />
+    <jar href="lib/commons-httpclient-3.1.jar" size="324418" download="eager" />
+    <jar href="lib/commons-io-2.0.1.jar" size="172141" download="eager" />
+    <jar href="lib/commons-logging-1.1.1.jar" size="65287" download="eager" />
+    <jar href="lib/httpclient-4.2.1.jar" size="462768" download="eager" />
+    <jar href="lib/httpclient-cache-4.2.1.jar" size="123645" download="eager" />
+    <jar href="lib/httpcore-4.2.1.jar" size="244988" download="eager" />
+    <jar href="lib/httpmime-4.2.1.jar" size="30062" download="eager" />
+  </resources>
+<security>
+  <all-permissions/>
+</security>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="Alic3 1.0" >
+    <param name="requiredFXVersion" value="2.2+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="wms.alice.Alic3"  name="Alic3 1.0" />
+  <update check="always"/>
+</jnlp>

@@ -1,0 +1,98 @@
+Signature-Version: 1.0
+SHA-256-Digest-Manifest-Main-Attributes: SLIQfbtBUPy/xFn1HUGL0V1XN0wH0
+ uVS5+0gBGaVxNg=
+SHA-256-Digest-Manifest: AtygaVpcl4BgrGzSrvVKS5C5iPhMzszYPaw5w1ljKtg=
+Created-By: 1.7.0_40 (Oracle Corporation)
+
+Name: wms/alice/archtypes/AliceProtoClient31.class
+SHA-256-Digest: y/E7AZYTwZbPHvOh58XKrDiaOasUJuGPwpfgZFMBJ5A=
+
+Name: wms/alice/Alic3.fxml
+SHA-256-Digest: 34+h/9a76IpR1c8YmjyoIsSI8mOv/8IKzRzHe1O9gz0=
+
+Name: com/javafx/main/Main.class
+SHA-256-Digest: ht61FD19OgsE8qNCxkXKZhgLctR9GQWGb18Sc863rZQ=
+
+Name: wms/alice/whiteRabbit_classic_invert_150.jpg
+SHA-256-Digest: TCWOzecPd5NW0R29hSMcIMyamUsfmJs0xG7L35j/MFY=
+
+Name: wms/alice/archtypes/AliceProtoClient42.class
+SHA-256-Digest: kEEXuQb3gnuNBACLvKS9bSQeIUPatYI/hNoW4yz/Rfk=
+
+Name: wms/alice/drinkme_images.jpg
+SHA-256-Digest: 09ZQhqF9cghzDLF5MggP/KXK5r3EIuQEmMblaBAfLEY=
+
+Name: wms/alice/whiteRabbit.jpg
+SHA-256-Digest: wLcD8C9At7yh6M/EcWooBeV1bXRCcaFTrqbbzYbwPME=
+
+Name: wms/alice/icons/whiteRabbit_classic_32.jpg
+SHA-256-Digest: U2s2D5iO83DDXsh1gQ1b9+zWBXP/ZdV+txwJmurdEx8=
+
+Name: wms/alice/Alic3.class
+SHA-256-Digest: CPxAD17lFt4eO7pCHy41kqASDWZIiggAz0eqYNnBg38=
+
+Name: wms/alice/AliceProtoMgrInterface.class
+SHA-256-Digest: LhzrBInJC6eyhDYBulPvt0trb9VgIbHPGWmYDbYD5Lg=
+
+Name: wms/alice/drinkme_image_150.jpg
+SHA-256-Digest: +V7OUV25xEF+aa1UOUr/RQtA2RjPlVTLbanLPD7aYbs=
+
+Name: wms/alice/whiteRabbit_classic_150.jpg
+SHA-256-Digest: kw9mL407fzPtVFxNhAslZbqCmsNeRjkKmalYchu6iIc=
+
+Name: wms/alice/AliceApp.class
+SHA-256-Digest: K2cKsQq8Miaq5TkB0wpKrP75iNAsVAuSckvbbjknfEE=
+
+Name: wms/alice/white-rabbit-stylesheet.css
+SHA-256-Digest: bOJ4YesVCx5Yhr+RM5A4WCB6fkbwBdf0X7pdMZ0CnK4=
+
+Name: wms/alice/archtypes/AliceProtoClientInterface.class
+SHA-256-Digest: WVc/gBCJiiQG3KOO748kzHygOSg7vvWGWt3UblC+8Uk=
+
+Name: wms/alice/archtypes/AliceProtoClientInterface$AliceClientId.clas
+ s
+SHA-256-Digest: cpl9IbwlpYy215jTG6J6gWaMfwxPy8T1WeP5M56BkQc=
+
+Name: wms/alice/archtypes/AliceProtoClient.class
+SHA-256-Digest: WmO3FMMPV5S7rncVsIDLUdwyn3Bi4CDoRmGmCrQZ0O0=
+
+Name: wms/alice/Alic3Controller.class
+SHA-256-Digest: FSBR8b3kpAIAoBW1TQOhtgZL8O5zHSQfPZcat1d4lqc=
+
+Name: wms/alice/Throbber.class
+SHA-256-Digest: vLIsdeyxM9unbc1Mm1w1yDz5n5iiN4g+d8Xgejm/wHc=
+
+Name: com/javafx/main/Main$2.class
+SHA-256-Digest: DktEHLAxsvW6+DutiqElcBk/704x2dE/Y4O0VGD8Mnk=
+
+Name: wms/alice/icons/whiteRabbit_classic_64.jpg
+SHA-256-Digest: DQxEcmayW0yAuEBgbjdjlWJ/Be813P6tzP02pKIoyDc=
+
+Name: com/javafx/main/NoJavaFXFallback.class
+SHA-256-Digest: CKUtb0dhjBYJyEmvIM3T//hzeWwJ2zJe5Q0koyFfDd0=
+
+Name: wms/alice/icons/whiteRabbit_classic_15.jpg
+SHA-256-Digest: 4JesmD00dI7RbW6kYuOS8J51uBYfS8O38975tYOq95c=
+
+Name: wms/alice/Alice.fxml
+SHA-256-Digest: Fw/hVSVZdz72Y0iK7/77LEkx3itaTAGnJjuDioUlofU=
+
+Name: wms/alice/archtypes/AliceProtoClientInterface$AliceClientType.cl
+ ass
+SHA-256-Digest: boXwjp+4uAuPY2jXEx8jWzcE78FuDnrIQoRxZQZIqY8=
+
+Name: wms/alice/archtypes/AliceProtoClient$1.class
+SHA-256-Digest: vVoUcbLiaZ/w/Dxn6t/xeoDs0CnslrqMCsU5lBvZapo=
+
+Name: wms/alice/whiteRabbit_classic_invert2_150.jpg
+SHA-256-Digest: 2fmC0RcPGmOyJlUlClrE+1cHzkKS7x5d7+6VltIOqHY=
+
+Name: com/javafx/main/Main$1.class
+SHA-256-Digest: yS2xLZsFazininQOlk5pBmMTRMQWrmtPCwHgPFKxGyk=
+
+Name: wms/alice/AliceProtoMgr.class
+SHA-256-Digest: RM0RbHpmayA+YnVOXXpp3mvoFa1Es8cS4C2HvI/dBrw=
+
+Name: wms/alice/WhiteRabbitHole_150.jpg
+SHA-256-Digest: EELi9kOXQXMZ+t50Yc3OBkiqQoVPeW1vrI9PGw/2CeA=
+

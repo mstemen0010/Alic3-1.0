@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.web.*?>
+
+<AnchorPane id="label" fx:id="anchorPane" blendMode="SRC_OVER" cache="true" depthTest="ENABLE" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#handleKeyPressed" prefHeight="793.0" prefWidth="815.0" styleClass="pane" xmlns:fx="http://javafx.com/fxml" fx:controller="alice.AliceController">
+  <children>
+    <Text id="text1" layoutX="394.0" layoutY="385.0" scaleX="1.758920063525675" scaleY="2.0032901982378855" strokeType="OUTSIDE" strokeWidth="0.0" text="http://">
+      <fill>
+        <Color blue="0.953" green="1.000" red="0.600" fx:id="x1" />
+      </fill>
+      <font>
+        <Font name="P22DaVinci-Forward" size="18.0" fx:id="x2" />
+      </font>
+    </Text>
+    <HBox minHeight="27.0" prefHeight="101.0" prefWidth="801.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <MenuBar id="menuBar" minHeight="25.0" prefHeight="57.0" prefWidth="280.0" styleClass="NavBarCell1">
+          <effect>
+            <SepiaTone>
+              <input>
+                <Lighting>
+                  <bumpInput>
+                    <Shadow />
+                  </bumpInput>
+                  <light>
+                    <javafx.scene.effect.Light.Distant color="#ff6666" />
+                  </light>
+                </Lighting>
+              </input>
+            </SepiaTone>
+          </effect>
+          <menus>
+            <Menu mnemonicParsing="false" text="File">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Close" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+              <items>
+                <MenuItem mnemonicParsing="false" text="About" />
+              </items>
+            </Menu>
+          </menus>
+          <stylesheets>
+            <URL value="@white-rabbit-stylesheet.css" />
+          </stylesheets>
+        </MenuBar>
+        <ComboBox id="comboBox1" fx:id="clientIdCombo" onAction="#setClientId" onHiding="#setClientId" onInputMethodTextChanged="#setClientId" prefWidth="200.0">
+          <effect>
+            <SepiaTone />
+          </effect>
+          <items>
+            <FXCollections fx:factory="observableArrayList">
+              <String fx:value="Item 1" />
+              <String fx:value="Item 2" />
+              <String fx:value="Item 3" />
+            </FXCollections>
+          </items>
+          <HBox.margin>
+            <Insets left="50.0" top="10.0" />
+          </HBox.margin>
+        </ComboBox>
+        <ComboBox id="comboBox2" fx:id="clientTypeCombo" onAction="#setClientType" prefWidth="200.0">
+          <effect>
+            <SepiaTone />
+          </effect>
+          <items>
+            <FXCollections fx:factory="observableArrayList">
+              <String fx:value="Item 1" />
+              <String fx:value="Item 2" />
+              <String fx:value="Item 3" />
+            </FXCollections>
+          </items>
+          <HBox.margin>
+            <Insets left="20.0" top="10.0" />
+          </HBox.margin>
+        </ComboBox>
+        <ImageView id="throbberImage" fx:id="throbberImageView" blendMode="SRC_OVER" cache="true" fitHeight="88.70000033256005" fitWidth="89.29530334472656" pickOnBounds="true" preserveRatio="true" HBox.hgrow="SOMETIMES">
+          <Image url="@drinkme_image_150.jpg" preserveRatio="false" smooth="false" />
+          <effect>
+            <Lighting specularConstant="0.4269841269841269">
+              <bumpInput>
+                <Shadow />
+              </bumpInput>
+              <contentInput>
+                <SepiaTone level="0.6037735849056604">
+                  <input>
+                    <Reflection />
+                  </input>
+                </SepiaTone>
+              </contentInput>
+              <light>
+                <javafx.scene.effect.Light.Distant />
+              </light>
+            </Lighting>
+          </effect>
+          <rotationAxis>
+            <Point3D />
+          </rotationAxis>
+          <HBox.margin>
+            <Insets left="125.0" top="10.0" />
+          </HBox.margin>
+        </ImageView>
+      </children>
+    </HBox>
+    <TextField fx:id="textfeild" layoutY="172.0" onAction="#handleTextFieldAction" prefWidth="487.7953186035156" AnchorPane.rightAnchor="252.0">
+      <effect>
+        <Reflection />
+      </effect>
+      <stylesheets>
+        <URL value="@white-rabbit-stylesheet.css" />
+      </stylesheets>
+    </TextField>
+    <WebView fx:id="webViewResponse" layoutY="293.0" prefHeight="119.0" prefWidth="739.0" AnchorPane.leftAnchor="33.0" AnchorPane.rightAnchor="43.0" />
+    <Button fx:id="go_button" layoutY="173.0" mnemonicParsing="false" onAction="#handleButtonAction" text="GO!" AnchorPane.rightAnchor="196.0">
+      <effect>
+        <Reflection />
+      </effect>
+      <stylesheets>
+        <URL value="@white-rabbit-stylesheet.css" />
+      </stylesheets>
+    </Button>
+    <Label fx:id="statusLabel" layoutX="98.0" layoutY="243.0" prefWidth="527.0" styleClass="label2" text="Follow the white rabbit">
+      <stylesheets>
+        <URL value="@white-rabbit-stylesheet.css" />
+      </stylesheets>
+    </Label>
+    <WebView fx:id="webViewContent" prefHeight="286.0" prefWidth="739.0" AnchorPane.bottomAnchor="47.0" AnchorPane.leftAnchor="34.0" AnchorPane.rightAnchor="42.0" AnchorPane.topAnchor="460.0" />
+    <Text fill="$x1" fontSmoothingType="LCD" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Response" AnchorPane.rightAnchor="43.0">
+      <font>
+        <Font name="P22DaVinci-Forward" size="32.0" />
+      </font>
+    </Text>
+    <Text fill="$x1" fontSmoothingType="LCD" layoutY="444.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Content" AnchorPane.rightAnchor="43.28">
+      <font>
+        <Font name="P22DaVinci-Forward" size="36.0" />
+      </font>
+    </Text>
+    <Text id="text1" fill="$x1" font="$x2" layoutX="30.0" layoutY="190.0" scaleX="1.758920063525675" scaleY="2.0032901982378855" strokeType="OUTSIDE" strokeWidth="0.0" text="http://" />
+    <Text id="text1" fill="$x1" font="$x2" layoutX="46.0" layoutY="259.0" scaleX="1.758920063525675" scaleY="2.0032901982378855" strokeType="OUTSIDE" strokeWidth="0.0" text="Status:" />
+  </children>
+  <effect>
+    <Glow level="0.2748427672955975">
+      <input>
+        <InnerShadow>
+          <input>
+            <DropShadow />
+          </input>
+        </InnerShadow>
+      </input>
+    </Glow>
+  </effect>
+  <stylesheets>
+    <URL value="@white-rabbit-stylesheet.css" />
+  </stylesheets>
+</AnchorPane>
