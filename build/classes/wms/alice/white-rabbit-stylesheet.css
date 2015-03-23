@@ -39,26 +39,10 @@
 /* ENSEMBLE OVERRIDES */
 /* ======================================================================================================= */
 /* Page background color */
-body {
+.body {
     background-color: maroon;
     font-family: sans-serif;
 }
-/* Hide unneeded stuff */
-hr:first-of-type { display: none; }
-hr:nth-of-type(2) { display: none; }
-table[cellpadding="1"]:first-of-type { display: none; } /* Top Navigation */
-table[cellpadding="1"]:last-of-type { display: none; } /* Bottom Navigation */
-hr:last-of-type { display: none; }
-img[src$="resources/inherit.gif"] { display: none; }
-/* Customize Visuals */
-h1, h2 {
-    font-size: 170%;
-    color: #0072aa;
-    margin: 0; padding: 0;
-}
-h2 br { display: none; } /* fix extra spacing at top of class page */
-h2 font { display: block; } /* fix extra spacing at top of class page */
-a { color: #0072aa; }
 .hr {
     background-color: #c7c6c6;
     height: 1px;
@@ -95,7 +79,6 @@ a { color: #0072aa; }
 }
 
 .theme {
-    master-color: grey;
     -fx-background-color: derive(maroon, 70%);
     -fx-font-size: 14px;
 }
@@ -121,7 +104,7 @@ a { color: #0072aa; }
 
 .label {
     -fx-text-fill: derive(skyblue, 20%);
-    -fx-font-size: 36px;
+    -fx-font-size: 24px;
 }
 
 .label2 {

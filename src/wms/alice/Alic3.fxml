@@ -13,7 +13,7 @@
 <?import javafx.scene.text.*?>
 <?import javafx.scene.web.*?>
 
-<AnchorPane id="label" fx:id="anchorPane" blendMode="SRC_OVER" cache="true" depthTest="ENABLE" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#handleKeyPressed" prefHeight="793.0" prefWidth="815.0" styleClass="pane" xmlns:fx="http://javafx.com/fxml" fx:controller="wms.alice.Alic3Controller">
+<AnchorPane id="label" fx:id="anchorPane" blendMode="SRC_OVER" cache="true" depthTest="ENABLE" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#handleKeyPressed" prefHeight="793.0" prefWidth="815.0" styleClass="pane" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="wms.alice.Alic3Controller">
   <children>
     <Text id="text1" layoutX="394.0" layoutY="385.0" scaleX="1.758920063525675" scaleY="2.0032901982378855" strokeType="OUTSIDE" strokeWidth="0.0" text="http://">
       <fill>
@@ -87,7 +87,9 @@
           </HBox.margin>
         </ComboBox>
         <ImageView id="throbberImage" fx:id="throbberImageView" blendMode="SRC_OVER" cache="true" fitHeight="88.70000033256005" fitWidth="89.29530334472656" pickOnBounds="true" preserveRatio="true" HBox.hgrow="SOMETIMES">
-          <Image url="@drinkme_image_150.jpg" preserveRatio="false" smooth="false" />
+           <image>
+             <Image preserveRatio="false" smooth="false" url="@drinkme_image_150.jpg" />
+           </image>
           <effect>
             <Lighting specularConstant="0.4269841269841269">
               <bumpInput>
@@ -114,7 +116,7 @@
         </ImageView>
       </children>
     </HBox>
-    <TextField fx:id="textfeild" layoutY="172.0" onAction="#handleTextFieldAction" prefWidth="487.7953186035156" AnchorPane.rightAnchor="252.0">
+    <TextField fx:id="textfeild" layoutY="172.0" onAction="#handleTextFieldAction" prefHeight="28.0" prefWidth="469.0" AnchorPane.rightAnchor="252.0">
       <effect>
         <Reflection />
       </effect>
@@ -147,8 +149,8 @@
         <Font name="P22DaVinci-Forward" size="36.0" />
       </font>
     </Text>
-    <Text id="text1" fill="$x1" font="$x2" layoutX="30.0" layoutY="190.0" scaleX="1.758920063525675" scaleY="2.0032901982378855" strokeType="OUTSIDE" strokeWidth="0.0" text="http://" />
-    <Text id="text1" fill="$x1" font="$x2" layoutX="46.0" layoutY="259.0" scaleX="1.758920063525675" scaleY="2.0032901982378855" strokeType="OUTSIDE" strokeWidth="0.0" text="Status:" />
+    <Text id="text1" fill="$x1" font="$x2" layoutX="30.0" layoutY="190.0" scaleX="1.758920063525675" scaleY="2.0032901982378855" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="theme" text="http://" />
+    <Text id="text1" fill="$x1" font="$x2" layoutX="46.0" layoutY="259.0" scaleX="1.758920063525675" scaleY="2.0032901982378855" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="table" text="Status:" />
   </children>
   <effect>
     <Glow level="0.2748427672955975">
