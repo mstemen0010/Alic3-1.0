@@ -7,17 +7,15 @@
     <offline-allowed/>
   </information>
   <resources>
-    <jfx:javafx-runtime version="8.0+" href="http://javadl.sun.com/webapps/download/GetFile/javafx-latest/windows-i586/javafx2.jnlp"/>
-  </resources>
-  <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="lib/commons-httpclient-3.1.jar" size="324431" download="eager" />
-    <jar href="lib/commons-io-2.0.1.jar" size="172115" download="eager" />
+    <jar href="lib/commons-codec-1.10.jar" size="307034" download="eager" />
+    <jar href="lib/commons-httpclient-3.1.jar" size="324432" download="eager" />
+    <jar href="lib/commons-io-2.0.1.jar" size="172113" download="eager" />
     <jar href="lib/commons-logging-1.1.1.jar" size="65304" download="eager" />
-    <jar href="lib/httpclient-4.2.1.jar" size="462694" download="eager" />
-    <jar href="lib/httpclient-cache-4.2.1.jar" size="123633" download="eager" />
-    <jar href="lib/httpcore-4.2.1.jar" size="244954" download="eager" />
-    <jar href="lib/httpmime-4.2.1.jar" size="30064" download="eager" />
+    <jar href="lib/httpclient-4.2.1.jar" size="462691" download="eager" />
+    <jar href="lib/httpclient-cache-4.2.1.jar" size="123634" download="eager" />
+    <jar href="lib/httpcore-4.2.1.jar" size="244952" download="eager" />
+    <jar href="lib/httpmime-4.2.1.jar" size="30065" download="eager" />
   </resources>
 <security>
   <all-permissions/>

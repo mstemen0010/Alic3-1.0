@@ -14,6 +14,7 @@ import java.io.StringWriter;
 import java.util.Iterator;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import org.apache.commons.httpclient.HttpClient;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
@@ -68,11 +69,21 @@ public class AliceProtoClient42 extends AliceProtoClient implements AliceProtoCl
 
     public void doGet(String urlString) {
         HttpGet request = new HttpGet(urlString);
+        Object rawClient = null;
         try {
-            aliceResponse = client.execute(request);
-            System.out.println("Response: " + aliceResponse.toString());
-        } catch (IOException ex) {
-            Logger.getLogger(AliceProtoClient42.class.getName()).log(Level.SEVERE, null, ex);
+            rawClient = this.getAliceClientType().getClientClass().newInstance();
+        } catch (InstantiationException ex) {
+            Logger.getLogger(AliceProtoClient31.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            Logger.getLogger(AliceProtoClient31.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        if (DefaultHttpClient.class.isInstance(rawClient)) {
+            try {
+                aliceResponse = client.execute(request);
+                System.out.println("Response: " + aliceResponse.toString());
+            } catch (IOException ex) {
+                Logger.getLogger(AliceProtoClient42.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
     }
 
@@ -94,7 +105,6 @@ public class AliceProtoClient42 extends AliceProtoClient implements AliceProtoCl
         } catch (IOException | IllegalStateException ex) {
             Logger.getLogger(AliceProtoClient42.class.getName()).log(Level.SEVERE, null, ex);
         }
-
 
         return content.toString();
     }
@@ -137,14 +147,13 @@ public class AliceProtoClient42 extends AliceProtoClient implements AliceProtoCl
         }
 
     }
-   
+
     @Override
     public AliceProtoClientInterface spinAlice(AliceClientType type) {
         AliceProtoClientInterface retObj = null;
-        if( type.equals(this.myClientType))
-        {
+        if (type.equals(this.myClientType)) {
             retObj = this;
         }
         return retObj;
-    }    
+    }
 }

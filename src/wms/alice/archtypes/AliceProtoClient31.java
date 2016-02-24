@@ -53,7 +53,15 @@ public class AliceProtoClient31 extends AliceProtoClient implements AliceProtoCl
 
 
         aliceGetMethod = new GetMethod(urlString);
-        Object rawClient = getAliceClientType().getClient();
+        
+        Object rawClient = null;
+         try {
+             rawClient = getAliceClientType().getClientClass().newInstance();
+         } catch (InstantiationException ex) {
+             Logger.getLogger(AliceProtoClient31.class.getName()).log(Level.SEVERE, null, ex);
+         } catch (IllegalAccessException ex) {
+             Logger.getLogger(AliceProtoClient31.class.getName()).log(Level.SEVERE, null, ex);
+         }
         if (HttpClient.class.isInstance(rawClient)) {
             HttpClient client = HttpClient.class.cast(rawClient);
             int statusCode;

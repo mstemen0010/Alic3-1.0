@@ -4,8 +4,6 @@
  */
 package wms.alice;
 
-
-
 import java.awt.event.KeyEvent;
 import java.net.URL;
 import java.util.ArrayList;
@@ -36,12 +34,13 @@ import wms.alice.archtypes.AliceProtoClient31;
 import wms.alice.archtypes.AliceProtoClientInterface;
 import wms.alice.archtypes.AliceProtoClientInterface.AliceClientId;
 import wms.alice.archtypes.AliceProtoClientInterface.AliceClientType;
+
 /**
  *
  * @author Mathias
  */
 class Throbber implements Runnable {
-    
+
     private ImageView throbberImageView;
     private Stack<Image> imageStack = new Stack<>();
     private ArrayList<Image> imageArray = new ArrayList<>(5);
@@ -103,17 +102,17 @@ class Throbber implements Runnable {
 public class Alic3Controller implements Initializable {
 
     @FXML
-    Stage myStage; 
-    
+    Stage myStage;
+
     @FXML
     AnchorPane anchorPane;
-    
+
     @FXML
     ComboBox clientTypeCombo;
-    
+
     @FXML
     ComboBox clientIdCombo;
-    
+
     @FXML
     ImageView throbberImageView;
     @FXML
@@ -136,7 +135,7 @@ public class Alic3Controller implements Initializable {
     Scene myScene;
     Throbber wrThrobber = null;
     Thread throbberThread = null;
-    
+
     public Alic3Controller() {
         // this.wrappedClient = new HttpClient();
         String im1Path = "wms/alice/whiteRabbit_classic_150.jpg";
@@ -146,34 +145,30 @@ public class Alic3Controller implements Initializable {
         throbberImage2 = new Image(im2Path, true);
         throbberImage3 = new Image(im3Path, true);
         pageBuffer = new StringBuilder(0);
-        if( AliceApp.isTest())
-        {
-            alice = AliceProtoClient.getInstance( AliceProtoClient31.class, AliceClientType.HttpClient31 );
+        if (AliceApp.isTest()) {
+            alice = AliceProtoClient.getInstance(AliceProtoClient31.class, AliceClientType.HttpClient31);
             alice.doGet("http://www.test.com");
             alice.release();
         }
-        alice = AliceProtoClient.getInstance( AliceProtoClient31.class, AliceClientType.HttpClient31 );
+        alice = AliceProtoClient.getInstance(AliceProtoClient31.class, AliceClientType.HttpClient31);
         alice.setClientId(AliceProtoClientInterface.AliceClientId.Alice1);
-        if( AliceApp.isTest())
-        {
+        if (AliceApp.isTest()) {
             alice.doGet("http://www.test.com");
             alice.release();
         }
-        
+
     }
-    
+
     @Override
-    public void finalize() throws Throwable
-    {
+    public void finalize() throws Throwable {
         try {
             this.wrThrobber.stop();
         } finally {
             super.finalize();
         }
     }
-    
-    public void setupChoices()
-    {
+
+    public void setupChoices() {
         String defaultClientId = alice.getClientId();
         String defaultClientType = alice.getClientType();
         ObservableList<String> options1 = FXCollections.observableArrayList();
@@ -182,27 +177,23 @@ public class Alic3Controller implements Initializable {
         Iterator<String> types = alice.getIdentTypes();
         String idChoice = ids.next();
         options1.add(idChoice);
-        
+
         String typeChoice = types.next();
         options2.add(typeChoice);
-        while( ids.hasNext() )
-        {            
+        while (ids.hasNext()) {
             String id = ids.next();
             options1.add(id);
-            System.out.println("Adding: " + id );     
-        }    
-        while( types.hasNext() )
-        {            
+            System.out.println("Adding: " + id);
+        }
+        while (types.hasNext()) {
             options2.add(types.next());
-        }    
-        
-        this.clientIdCombo.setItems(options1);   
+        }
+
+        this.clientIdCombo.setItems(options1);
         this.clientIdCombo.setValue(defaultClientId);
-        this.clientTypeCombo.setItems( options2 );
+        this.clientTypeCombo.setItems(options2);
         this.clientTypeCombo.setValue(defaultClientType);
-        
-        
-        
+
     }
 
     @FXML
@@ -215,7 +206,7 @@ public class Alic3Controller implements Initializable {
         sb.append(val);
         this.go(sb.toString());
     }
-    
+
 //    @FXML
 //    private void handleKeyPressed(Event event)
 //    {
@@ -253,48 +244,40 @@ public class Alic3Controller implements Initializable {
             System.out.println("Buffer is: " + pageBuffer);
         }
     }
-    
+
     @FXML
-    private void setClientType()
-    {
+    private void setClientType() {
         AliceClientType currentAliceType = alice.getAliceClientType();
         String currentComboSelect = (String) clientTypeCombo.getSelectionModel().getSelectedItem();
-        if( currentComboSelect != null && currentComboSelect.equals(currentAliceType.friendlyName()))
-        {
+        if (currentComboSelect != null && currentComboSelect.equals(currentAliceType.friendlyName())) {
             AliceClientType newType = AliceClientType.fromStringName(currentComboSelect);
             alice = newType.spinClient();
             alice.setClientType(newType);
-        }
-        else if( currentComboSelect != null && ! currentComboSelect.equals(currentAliceType.friendlyName() ))
-        {
+        } else if (currentComboSelect != null && !currentComboSelect.equals(currentAliceType.friendlyName())) {
             AliceClientType newType = AliceClientType.fromStringName(currentComboSelect);
 //            AliceProtoClient newClient = (AliceProtoClient) newType.getProtoClass().cast(alice);
             alice = newType.spinClient();
 //            alice = AliceProtoClient.getInstance( newType.getClientClass(), newType );
             alice.setClientType(newType);
-            
+
         }
     }
-    
+
     @FXML
-    private void setClientId()
-    {
+    private void setClientId() {
         String currentComboSelect = null;
-        if( this.anchorPane == null || ! this.anchorPane.isVisible() || alice == null )
-        {
+        if (this.anchorPane == null || !this.anchorPane.isVisible() || alice == null) {
             return;
         }
         AliceClientId currentAliceId = alice.getAliceClientId();
-        if( currentComboSelect == null )
-        {
+        if (currentComboSelect == null) {
             currentComboSelect = (String) clientIdCombo.getSelectionModel().getSelectedItem();
         }
-        if( currentComboSelect != null && ! currentComboSelect.equals(currentAliceId.friendlyName()))
-        {            
+        if (currentComboSelect != null && !currentComboSelect.equals(currentAliceId.friendlyName())) {
             AliceClientId newType = AliceClientId.fromStringName(currentComboSelect);
             alice.setClientId(newType);
-            
-        }      
+
+        }
     }
 
     @Override
@@ -302,7 +285,7 @@ public class Alic3Controller implements Initializable {
         // TODO
         this.anchorPane.getScene();
         this.setupChoices();
-    }    
+    }
 
     public void go(String urlAsString) {
         myScene = anchorPane.getScene();
@@ -313,9 +296,9 @@ public class Alic3Controller implements Initializable {
             wrThrobber.addImage(throbberImage2);
             wrThrobber.addImage(throbberImage3);
             throbberThread = new Thread(wrThrobber);
-}
+        }
 
-        this.throbberImageView.setImage(throbberImage3);        
+        this.throbberImageView.setImage(throbberImage3);
         startThrobber();
         if (myStage != null) {
             myStage.setTitle(cleanUrlAsString);
@@ -360,8 +343,6 @@ public class Alic3Controller implements Initializable {
         } else {
             sb = new StringBuilder(unPrettyURL);
         }
-
-
 
         return sb.toString();
     }
