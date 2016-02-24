@@ -1,7 +1,4 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package wms.alice.archtypes;
 
 import static wms.alice.archtypes.AliceProtoClientInterface.AliceClientId.iterator;
@@ -16,7 +13,17 @@ import org.apache.http.impl.client.DefaultHttpClient;
 /**
  *
  * @author MStemen
+ *
+* The "Alice" browser is a polymorphic web browser that is basically able to change the underlying "engine"
+* (in this case the version of the Apache HttpClient version) by selecting a different  version from a drop down
+* Due to the design of the browser framework in Alice, these versions  are not required to be known at compile time
+*  as the class of a given version is reflected by the following Interfaces enum ( basically a "typedef") that encapsulates the 
+* class name and base type.  This once again shows the power of the enumerations in Java
+*
+ *  Client "Prototype" Interface that allows  the Alice Browser to be able to "discover"
+*   new  HttpClient versions at runtime, this 
  */
+
 public interface AliceProtoClientInterface {
 
     enum AliceClientType {
