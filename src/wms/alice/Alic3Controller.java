@@ -41,9 +41,9 @@ import wms.alice.archtypes.AliceProtoClientInterface.AliceClientType;
  */
 class Throbber implements Runnable {
 
-    private ImageView throbberImageView;
-    private Stack<Image> imageStack = new Stack<>();
-    private ArrayList<Image> imageArray = new ArrayList<>(5);
+    private final ImageView throbberImageView;
+    private final Stack<Image> imageStack = new Stack<>();
+    private final ArrayList<Image> imageArray = new ArrayList<>(5);
     boolean running = true;
     boolean throbbing = false;
     Iterator<Image> it = null;
@@ -257,7 +257,7 @@ public class Alic3Controller implements Initializable {
             AliceClientType newType = AliceClientType.fromStringName(currentComboSelect);
 //            AliceProtoClient newClient = (AliceProtoClient) newType.getProtoClass().cast(alice);
             alice = newType.spinClient();
-//            alice = AliceProtoClient.getInstance( newType.getClientClass(), newType );
+            alice = AliceProtoClient.getInstance( newType.getProtoClass(), newType );
             alice.setClientType(newType);
 
         }

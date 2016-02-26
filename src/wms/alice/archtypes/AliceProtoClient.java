@@ -99,7 +99,7 @@ public abstract class AliceProtoClient implements AliceProtoClientInterface {
         if (adaptorClass != aliceProtoClientClass) {
             aliceProtoClientClass = adaptorClass;
             try {
-;                rawAdaptorClassObjeact = adaptorClass.newInstance(); //this creates an instance of the subclass;
+                rawAdaptorClassObjeact = adaptorClass.newInstance(); //this creates an instance of the subclass;
                 if (rawAdaptorClassObjeact != null) {
 
                     AliceProtoClient tClient = AliceProtoClient.class.cast(rawAdaptorClassObjeact);
@@ -216,7 +216,7 @@ public abstract class AliceProtoClient implements AliceProtoClientInterface {
     public AliceClientId getAliceClientId() {
         return this.myClientId;
     }
-    
+
     @Override
     public String getClientType() {
         return this.myClientType.name();
@@ -226,19 +226,17 @@ public abstract class AliceProtoClient implements AliceProtoClientInterface {
     public String getClientId() {
         return this.myClientId.name();
     }
-    
+
     @Override
-    public void setClientId( AliceClientId newId )
-    {
+    public void setClientId(AliceClientId newId) {
         this.myClientId = newId;
-        System.out.println("Client ID is now: " + newId.friendlyName );
+        System.out.println("Client ID is now: " + newId.friendlyName);
     }
-    
+
     @Override
-    public void setClientType( AliceClientType newType )
-    {
-        this.myClientType = newType;
-        System.out.println("Client ID is now: " + newType.friendlyName );
+    public void setClientType(AliceClientType newType) {
+        myClientType = newType;
+        System.out.println("Client ID is now: " + newType.friendlyName);
     }
 }
 ///// OLD CODE BELOW THIS LINE 

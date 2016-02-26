@@ -4,8 +4,6 @@
  */
 package wms.alice.archtypes;
 
-import wms.alice.archtypes.AliceProtoClient;
-import wms.alice.archtypes.AliceProtoClientInterface;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,19 +12,9 @@ import java.io.StringWriter;
 import java.util.Iterator;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import org.apache.commons.httpclient.HttpClient;
 import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
-import org.apache.http.conn.ClientConnectionManager;
-import org.apache.http.conn.scheme.PlainSocketFactory;
-import org.apache.http.conn.scheme.Scheme;
-import org.apache.http.conn.scheme.SchemeRegistry;
-import org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager;
-import org.apache.http.params.BasicHttpParams;
-import org.apache.http.params.HttpParams;
-import org.apache.http.params.HttpProtocolParams;
 
 /**
  *
@@ -39,6 +27,7 @@ public class AliceProtoClient42 extends AliceProtoClient implements AliceProtoCl
 
     public AliceProtoClient42() {
         // construct and init
+        myClientType = AliceClientType.HttpClient42;
         Object rawClient = getAliceClientType().getClient();
         if (DefaultHttpClient.class.isInstance(rawClient)) {
             client = DefaultHttpClient.class.cast(rawClient);
@@ -72,6 +61,7 @@ public class AliceProtoClient42 extends AliceProtoClient implements AliceProtoCl
         Object rawClient = null;
         try {
             rawClient = this.getAliceClientType().getClientClass().newInstance();
+            this.client = (DefaultHttpClient) rawClient;
         } catch (InstantiationException ex) {
             Logger.getLogger(AliceProtoClient31.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
