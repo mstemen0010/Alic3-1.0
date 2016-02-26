@@ -8,14 +8,14 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="lib/commons-codec-1.10.jar" size="307031" download="eager" />
-    <jar href="lib/commons-httpclient-3.1.jar" size="324427" download="eager" />
-    <jar href="lib/commons-io-2.0.1.jar" size="172111" download="eager" />
-    <jar href="lib/commons-logging-1.1.1.jar" size="65302" download="eager" />
-    <jar href="lib/httpclient-4.2.1.jar" size="462689" download="eager" />
-    <jar href="lib/httpclient-cache-4.2.1.jar" size="123629" download="eager" />
-    <jar href="lib/httpcore-4.2.1.jar" size="244948" download="eager" />
-    <jar href="lib/httpmime-4.2.1.jar" size="30061" download="eager" />
+    <jar href="lib/commons-codec-1.10.jar" size="307033" download="eager" />
+    <jar href="lib/commons-httpclient-3.1.jar" size="324431" download="eager" />
+    <jar href="lib/commons-io-2.0.1.jar" size="172114" download="eager" />
+    <jar href="lib/commons-logging-1.1.1.jar" size="65303" download="eager" />
+    <jar href="lib/httpclient-4.2.1.jar" size="462695" download="eager" />
+    <jar href="lib/httpclient-cache-4.2.1.jar" size="123633" download="eager" />
+    <jar href="lib/httpcore-4.2.1.jar" size="244951" download="eager" />
+    <jar href="lib/httpmime-4.2.1.jar" size="30064" download="eager" />
   </resources>
 <security>
   <all-permissions/>

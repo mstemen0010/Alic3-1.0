@@ -80,6 +80,11 @@ public class AliceProtoClient31 extends AliceProtoClient implements AliceProtoCl
                     }
                     aliceClientContent = content.toString();
                 }
+                else
+                {
+                    aliceClientStatus = String.valueOf(statusCode);
+                    System.out.println("Got Error code: " + statusCode );
+                }
             } catch (IOException ex) {
                 Logger.getLogger(AliceProtoClient31.class.getName()).log(Level.SEVERE, null, ex);
             }

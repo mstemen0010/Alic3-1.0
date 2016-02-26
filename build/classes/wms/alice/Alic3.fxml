@@ -13,7 +13,7 @@
 <?import javafx.scene.text.*?>
 <?import javafx.scene.web.*?>
 
-<AnchorPane id="label" fx:id="anchorPane" blendMode="SRC_OVER" cache="true" depthTest="ENABLE" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#handleKeyPressed" prefHeight="793.0" prefWidth="815.0" styleClass="pane" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="wms.alice.Alic3Controller">
+<AnchorPane id="label" fx:id="anchorPane" blendMode="SRC_OVER" cache="true" depthTest="ENABLE" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#handleKeyPressed" prefHeight="793.0" prefWidth="815.0" styleClass="pane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wms.alice.Alic3Controller">
   <children>
     <Text id="text1" layoutX="394.0" layoutY="385.0" scaleX="1.758920063525675" scaleY="2.0032901982378855" strokeType="OUTSIDE" strokeWidth="0.0" text="http://">
       <fill>
@@ -133,7 +133,7 @@
         <URL value="@white-rabbit-stylesheet.css" />
       </stylesheets>
     </Button>
-    <Label fx:id="statusLabel" layoutX="98.0" layoutY="243.0" prefWidth="527.0" styleClass="label2" text="Follow the white rabbit">
+    <Label fx:id="statusLabel" layoutX="137.0" layoutY="241.0" prefHeight="23.0" prefWidth="453.0" styleClass="label2" text="Follow the white rabbit">
       <stylesheets>
         <URL value="@white-rabbit-stylesheet.css" />
       </stylesheets>
